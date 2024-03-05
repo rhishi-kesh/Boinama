@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('user_id');
             $table->string('status')->default(1)->comment('0 = Active & 1 = Deactive');
             $table->string('is_nav')->default(1);
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

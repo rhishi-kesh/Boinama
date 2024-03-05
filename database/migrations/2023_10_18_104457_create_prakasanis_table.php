@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug');
             $table->string('user_id');
             $table->string('is_nav')->default(1);
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

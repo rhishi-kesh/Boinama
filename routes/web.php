@@ -55,18 +55,18 @@ use Illuminate\Support\Facades\Route;
 
 //Controllers
 
-// admin-login logout all can
-Route::get('/login', [Admin::class, 'adminloginshow'])->name('adminloginshow');
+// admin-login logout
+Route::get('/admin', [Admin::class, 'adminloginshow'])->name('adminloginshow');
 Route::post('/loginPost', [Admin::class, 'adminloginsPOST'])->name('adminloginsPOST');
 Route::post('/logout', [Admin::class, 'adminlogout'])->name('adminlogout');
 
-//customer login logout register all can
+//customer login logout register
 Route::post('/loginpost', [Customer::class, 'customerloginpost'])->name('customerloginpost');
 Route::post('/customerlogout', [Customer::class, 'customerLogout'])->name('customerLogout');
 Route::post('/register', [Customer::class, 'customerregistationpost'])->name('customerregistationpost');
+
 //homepage
 Route::post('/', [Frontend::class, 'main'])->name('main');
-// Route::get('/search', [Frontend::class, 'search'])->name('search');
 
 //not-found
 Route::get('/nofound', [NotFound::class, 'notfound'])->name('notfound');
