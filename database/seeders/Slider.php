@@ -24,7 +24,7 @@ class Slider extends Seeder
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s')
             ]
         );
-        File::move(
+        File::copy(
             public_path('slider.jpg'),
             Storage::path('public/Sliders/slider.jpg')
         );

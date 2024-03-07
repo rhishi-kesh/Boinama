@@ -26,7 +26,7 @@ class Corporates extends Seeder
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s')
             ]
         );
-        File::move(
+        File::copy(
             public_path('corporate.jpg'),
             Storage::path('public/Corporates/corporate.jpg')
         );

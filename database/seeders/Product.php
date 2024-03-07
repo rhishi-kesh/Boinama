@@ -34,7 +34,7 @@ class Product extends Seeder
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s')
             ]
         );
-        File::move(
+        File::copy(
             public_path('product.jpg'),
             Storage::path('public/Product/product.jpg')
         );

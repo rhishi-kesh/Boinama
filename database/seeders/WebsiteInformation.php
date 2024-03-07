@@ -31,7 +31,7 @@ class WebsiteInformation extends Seeder
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s')
             ]
         );
-        File::move(
+        File::copy(
             public_path('logo.png'),
             Storage::path('public/Logo/logo.png')
         );
